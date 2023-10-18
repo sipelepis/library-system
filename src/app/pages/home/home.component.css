@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .square-card {
+    @apply max-w-[15rem] max-h-[15rem] min-w-[15rem] min-h-[15rem];
+  }
+}
