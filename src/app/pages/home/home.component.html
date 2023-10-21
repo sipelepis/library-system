@@ -1,99 +1,27 @@
 <main class="w-full p-5">
   <h1 class="text-2xl font-bold mb-4">Book Status</h1>
-  <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-    <app-book-status-card
-      bookStatusText="Text"
-      color="red"
-      [count]="0"
-      url="low"
-    ></app-book-status-card>
+  <div
+    class="mb-4 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4"
+  >
+    <app-book-status-card [statusData]="statusCardMeta[0]">
+      <span class="iconify icon" data-icon="ic:baseline-check-box"></span>
+    </app-book-status-card>
 
-    <div
-      class="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-xl transition-shadow ease-in dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center justify-around max-w-[18rem] max-h-[16rem] min-w-[18rem] min-h-[16rem]"
-    >
-      <h5
-        class="text-2xl font-semibold tracking-tight text-green-500 font-heading uppercase dark:text-white inline-flex items-center gap-2"
-      >
-        <span class="iconify icon" data-icon="ph:book-fill"></span>
-        Available
-      </h5>
-      <span class="font-heading text-5xl font-bold my-2">0</span>
-      <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">
-        Books that are currently available for lending/borrowing
-      </p>
-      <p>
-        <a
-          href="#"
-          class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-500 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-500 focus:outline-none focus:shadow-outline-green"
-          >Learn more</a
-        >
-      </p>
-    </div>
+    <app-book-status-card [statusData]="statusCardMeta[1]">
+      <span class="iconify icon" data-icon="ph:book-fill"></span>
+    </app-book-status-card>
 
-    <div
-      class="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-xl transition-shadow ease-in dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center justify-around max-w-[18rem] max-h-[16rem] min-w-[18rem] min-h-[16rem]"
-    >
-      <h5
-        class="text-2xl font-semibold tracking-tight text-sky-500 font-heading uppercase dark:text-white inline-flex items-center gap-2"
-      >
-        <span class="iconify icon" data-icon="fontisto:radio-btn-active"></span>
-        On Hold
-      </h5>
-      <span class="font-heading text-5xl font-bold my-2">0</span>
-      <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">
-        Books that are currently borrowed by patrons inside
-      </p>
-      <p>
-        <a
-          href="#"
-          class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-sky-500 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-500 focus:outline-none focus:shadow-outline-green"
-          >Learn more</a
-        >
-      </p>
-    </div>
+    <app-book-status-card [statusData]="statusCardMeta[2]">
+      <span class="iconify icon" data-icon="fontisto:radio-btn-active"></span>
+    </app-book-status-card>
 
-    <div
-      class="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-xl transition-shadow ease-in dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center justify-around max-w-[18rem] max-h-[16rem] min-w-[18rem] min-h-[16rem]"
-    >
-      <h5
-        class="text-2xl font-semibold tracking-tight text-amber-500 font-heading uppercase dark:text-white inline-flex items-center gap-2"
-      >
-        <span class="iconify icon" data-icon="ph:calendar"></span>
-        Overdue
-      </h5>
-      <span class="font-heading text-5xl font-bold my-2">0</span>
-      <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">
-        Books lent by patrons past their overdue date
-      </p>
-      <p>
-        <a
-          href="#"
-          class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-amber-500 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-500 focus:outline-none focus:shadow-outline-green"
-          >Learn more</a
-        >
-      </p>
-    </div>
+    <app-book-status-card [statusData]="statusCardMeta[3]">
+      <span class="iconify icon" data-icon="ph:calendar"></span>
+    </app-book-status-card>
 
-    <div
-      class="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-xl transition-shadow ease-in dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center justify-around max-w-[18rem] max-h-[16rem] min-w-[18rem] min-h-[16rem]"
-    >
-      <h5
-        class="text-2xl font-semibold tracking-tight text-amber-500 font-heading uppercase dark:text-white inline-flex items-center gap-2"
-      >
-        <span class="iconify icon" data-icon="ph:calendar"></span>
-        Overdue
-      </h5>
-      <span class="font-heading text-5xl font-bold my-2">0</span>
-      <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">
-        Books that are missing, lost, or damaged
-      </p>
-      <p>
-        <a
-          href="#"
-          class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-amber-500 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-500 focus:outline-none focus:shadow-outline-green"
-          >Learn more</a
-        >
-      </p>
-    </div>
+    <app-book-status-card [statusData]="statusCardMeta[4]">
+      <span class="iconify icon" data-icon="uil:x"></span>
+    </app-book-status-card>
   </div>
+  <h1 class="text-2xl font-bold mb-4">Patron Statistics</h1>
 </main>

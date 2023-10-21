@@ -1,24 +1,20 @@
-<div
-  class="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-xl transition-all ease-in dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center justify-around max-w-[18rem] max-h-[16rem] min-w-[18rem] min-h-[16rem]"
->
-  <h5
-    class="text-2xl font-semibold tracking-tight text-blue-500 font-heading uppercase dark:text-white inline-flex items-center gap-2"
-  >
-    <span
-      class="iconify icon"
-      data-icon="carbon:checkbox-checked-filled"
-    ></span>
-    {{ bookStatusText }}
+<div [classList]="[cardClasses]">
+  <h5 [class]="titleClasses">
+    <ng-content></ng-content>
+    {{ statusData.bookStatusText }}
   </h5>
   <span class="font-heading text-5xl font-bold my-2">0</span>
   <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">
-    Books that are currently lent by patrons outside the premises
+    {{ statusData.description }}
   </p>
   <p>
     <a
-      [routerLink]="['/books?status=' + url]"
-      class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-500 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-500 focus:outline-none focus:shadow-outline-green"
-      >Learn more</a
+      [routerLink]="['/books']"
+      [queryParams]="{ status: statusData.status }"
+      type="button"
+      [class]="buttonClasses"
     >
+      See {{ statusData.bookStatusText }} Books
+    </a>
   </p>
 </div>
