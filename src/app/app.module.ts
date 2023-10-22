@@ -2,30 +2,30 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BookCardComponent } from './components/book-card/book-card.component';
-import { TransactionComponent } from './pages/transaction/transaction.component';
+import { SharedModule } from './shared/shared.module';
+import { GuideComponent } from './pages/guide/guide.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LogComponent } from './pages/log/log.component';
-import { SettingsComponent } from './pages/settings/settings.component';
-import { BookComponent } from './pages/book/book.component';
-import { GuideComponent } from './pages/guide/guide.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { BookStatusCardComponent } from './components/book-status-card/book-status-card.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { TransactionComponent } from './pages/transaction/transaction.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookCardComponent,
-    TransactionComponent,
+    GuideComponent,
     HomeComponent,
     LogComponent,
-    SettingsComponent,
-    BookComponent,
-    GuideComponent,
     NotFoundComponent,
-    BookStatusCardComponent,
+    SettingsComponent,
+    TransactionComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    SharedModule, BrowserAnimationsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

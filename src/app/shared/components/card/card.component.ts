@@ -1,11 +1,11 @@
 import { Component, Input, TemplateRef } from '@angular/core';
 
 @Component({
-  selector: 'app-book-status-card',
-  templateUrl: './book-status-card.component.html',
-  styleUrls: ['./book-status-card.component.css'],
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.css']
 })
-export class BookStatusCardComponent {
+export class CardComponent {
   @Input() statusData!: StatusData;
   @Input() iconComponent!: TemplateRef<any>;
 
@@ -27,3 +27,4 @@ interface StatusData {
   count: number;
   description: string;
 }
+

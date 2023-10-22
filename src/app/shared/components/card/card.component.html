@@ -1,0 +1,21 @@
+<div [classList]="[cardClasses]">
+    <h5 [class]="titleClasses">
+      <ng-content></ng-content>
+      {{ statusData.bookStatusText }}
+    </h5>
+    <span class="font-heading text-5xl font-bold my-2">0</span>
+    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">
+      {{ statusData.description }}
+    </p>
+    <p>
+      <!-- <a
+        [routerLink]="['/books']"
+        [queryParams]="{ status: statusData.status }"
+        type="button"
+        [class]="buttonClasses"
+      >
+        See {{ statusData.bookStatusText }} Books
+      </a> -->
+    </p>
+  </div>
+  
